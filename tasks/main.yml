@@ -3,4 +3,8 @@
 
 # Add state flags for present, absent, reset?
 
-- include: mid_install_{{ ansible_system }}.yml
+- hosts: all
+  gather_facts: false
+  tasks:
+
+    - include: mid_install_{{ ansible_system }}.yml
